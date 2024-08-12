@@ -9,12 +9,19 @@ import com.example.enfecdemo.R
 import com.example.enfecdemo.databinding.FragmentDetailsBinding
 import com.example.enfecdemo.model.database.model.Users
 import com.example.enfecdemo.utils.USER_DATA
-
+/**
+ * Fragment class for displaying details of a user.
+ * Binds UI elements and populates them with user data retrieved from arguments.
+ */
 class DetailsFragment : Fragment(R.layout.fragment_details) {
 
     private lateinit var binding: FragmentDetailsBinding
 
-
+    /**
+     * Called immediately after the view is created. Binds the UI elements and populates them with user data.
+     * @param view The view returned by `onCreateView`.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state.
+     */
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
