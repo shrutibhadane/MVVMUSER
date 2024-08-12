@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.enfecdemo.R
 
@@ -17,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         navController = findNavController(R.id.navHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
+        //val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        //navController = navHostFragment.navController
     }
 
     override fun onSupportNavigateUp(): Boolean {

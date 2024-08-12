@@ -45,7 +45,7 @@ android {
         compose = true
         viewBinding = true
         buildConfig = true
-
+        dataBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -102,6 +102,9 @@ dependencies {
     //ROOM
     implementation("androidx.room:room-runtime:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
+    annotationProcessor("android.arch.persistence.room:compiler:1.1.1")
+    //ksp ("androidx.room:room-compiler:2.6.1")
+
 
     //NAVIGATION
     implementation("androidx.navigation:navigation-compose:2.7.7")
