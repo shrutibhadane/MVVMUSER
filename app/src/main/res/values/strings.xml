@@ -4,8 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="loading">Loading</string>
 
-    <string name="search_for_employee">Search for Employee</string>
-    <string name="view_all_employees">View All Employees</string>
-    <string name="employee_id">Employee ID</string>
+    <string name="search_for_employee">Search for User</string>
+    <string name="view_all_employees">View All Users</string>
+    <string name="employee_id">User ID</string>
     <string name="search">Search</string>
 </resources>
