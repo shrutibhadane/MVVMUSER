@@ -1,7 +1,6 @@
 package com.example.enfecdemo
 
 import android.app.Application
-import timber.log.Timber
 
 /**
  * Overridden Application class to initialize certain libraries at a higher level than just a
