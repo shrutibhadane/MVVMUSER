@@ -107,7 +107,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     // Material Design
-    implementation("androidx.compose.material3:material3")
+    //implementation("androidx.compose.material3:material3")
     implementation("com.google.android.material:material:1.12.0")
 
     // Better log messages
