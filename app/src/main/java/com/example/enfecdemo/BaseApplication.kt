@@ -9,8 +9,8 @@ class BaseApplication : Application() {
         super.onCreate()
 
         // Initialize Timber.  More information can be found in the README.
-        /*if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
-        }*/
+        }
     }
 }
