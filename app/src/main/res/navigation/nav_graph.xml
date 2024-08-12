@@ -20,5 +20,5 @@ app:startDestination="@id/listFragment">
 <fragment
     android:id="@+id/detailFragment"
     android:name="com.example.enfecdemo.view.fragments.DetailsFragment"
-    tools:layout="@layout/detail_fragment" />
+    tools:layout="@layout/fragment_details" />
 </navigation>
