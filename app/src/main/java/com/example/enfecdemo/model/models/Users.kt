@@ -42,11 +42,33 @@ data class Users(
     @Expose
     val company: Company? = null,
 ) : Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readInt(),
+        parcel.readString() ?: "",
+        parcel.readString() ?: "",
+        parcel.readString() ?: "",
+        parcel.readParcelable(Address::class.java.classLoader),
+        parcel.readString() ?: "",
+        parcel.readString() ?: "",
+        parcel.readParcelable(Company::class.java.classLoader)
+    ) {
+    }
+
     override fun describeContents(): Int {
         TODO("Not yet implemented")
     }
 
     override fun writeToParcel(dest: Parcel, flags: Int) {
         TODO("Not yet implemented")
+    }
+
+    companion object CREATOR : Parcelable.Creator<Users> {
+        override fun createFromParcel(parcel: Parcel): Users {
+            return Users(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Users?> {
+            return arrayOfNulls(size)
+        }
     }
 }
