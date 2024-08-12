@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.DetailsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:contentPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                tools:text="Details: " />
+
+            <TextView
+                android:id="@+id/textViewId"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+                tools:text="User ID" />
+
+            <TextView
+                android:id="@+id/textViewName"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewId"
+                tools:text="Name" />
+
+            <TextView
+                android:id="@+id/textViewUserName"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewName"
+                tools:text="User Name" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUserName"
+                tools:text="Email" />
+
+            <TextView
+                android:id="@+id/textViewAddress"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
+                tools:text="Address" />
+
+            <TextView
+                android:id="@+id/textViewPhone"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAddress"
+                tools:text="Phone" />
+
+            <TextView
+                android:id="@+id/textViewWebsite"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPhone"
+                tools:text="Website" />
+
+            <TextView
+                android:id="@+id/textViewCompany"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewWebsite"
+                tools:text="Company" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
