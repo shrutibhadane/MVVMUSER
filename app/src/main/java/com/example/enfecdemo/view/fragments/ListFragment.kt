@@ -2,9 +2,7 @@ package com.example.enfecdemo.view.fragments
 
 import androidx.fragment.app.Fragment
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -16,7 +14,7 @@ import com.example.enfecdemo.utils.USER_DATA
 import com.example.enfecdemo.utils.USER_ID
 import com.example.enfecdemo.utils.USER_NAME
 import com.example.enfecdemo.view.adapter.UsersListAdapter
-import com.example.enfecdemo.viewModel.ListViewModel
+import com.example.enfecdemo.viewModel.viewModels.ListViewModel
 
 
 class ListFragment : Fragment(R.layout.fragment_list) {
@@ -35,8 +33,7 @@ class ListFragment : Fragment(R.layout.fragment_list) {
             this.layoutManager = LinearLayoutManager(this.context)
             this.adapter = UsersListAdapter { user ->
                 val bundle = bundleOf(USER_ID to user.id,
-                    USER_NAME to user.name,
-                    USER_DATA to user)
+                    USER_NAME to user.name)
                 findNavController().navigate(R.id.action_listFragment_to_detailFragment, bundle)
             }
             // This a simple divider between each list item in the RecyclerView

@@ -1,4 +1,4 @@
-package com.example.enfecdemo.database.model
+package com.example.enfecdemo.model.database.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -10,7 +10,7 @@ data class Users(
 
     @Expose
     @PrimaryKey
-    var id:Int,
+    var id: Int,
 
     @SerializedName("name")
     @Expose
@@ -26,7 +26,7 @@ data class Users(
 
     @SerializedName("address")
     @Expose
-    val address: Address,
+    val address: Address? = null,
 
     @SerializedName("phone")
     @Expose
@@ -38,6 +38,5 @@ data class Users(
 
     @SerializedName("company")
     @Expose
-    val company: Company,
-
-    )
+    val company: Company? = null,
+)

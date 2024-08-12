@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.enfecdemo.R
-import com.example.enfecdemo.database.model.Users
+import com.example.enfecdemo.model.database.model.Users
 
 class UsersListAdapter(private val onClickListener: (Users) -> Unit) :
     ListAdapter<Users, UserViewHolder>(UserDiffCallback()) {

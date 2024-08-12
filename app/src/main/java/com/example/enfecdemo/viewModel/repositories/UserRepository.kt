@@ -1,18 +1,18 @@
-package com.example.enfecdemo.repository
+package com.example.enfecdemo.viewModel.repositories
 
 import android.app.Application
 import androidx.lifecycle.LiveData
 import com.example.enfecdemo.api.RestEndPoints
-import com.example.enfecdemo.api.RetrofitInstance
-import com.example.enfecdemo.database.UsersRoomDB
-import com.example.enfecdemo.database.dao.UsersDao
-import com.example.enfecdemo.database.model.Users
+import com.example.enfecdemo.api.RetroFitInstance
+import com.example.enfecdemo.model.database.UsersRoomDB
+import com.example.enfecdemo.model.database.daos.UsersDao
+import com.example.enfecdemo.model.database.model.Users
 import timber.log.Timber
 
 class UserRepository private constructor(application: Application) {
 
     private val usersDAO: UsersDao = UsersRoomDB.getDatabase(application).getUserDao()
-    private val userCalls = RetrofitInstance.getInstance().create(RestEndPoints::class.java)
+    private val userCalls = RetroFitInstance.getInstance().create(RestEndPoints::class.java)
 
     /**
      * An 'init' block in Kotlin is called immediately after an Object is created, and never again.

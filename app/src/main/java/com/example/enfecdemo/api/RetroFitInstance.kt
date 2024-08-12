@@ -4,7 +4,7 @@ import com.example.enfecdemo.utils.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitInstance {
+object RetroFitInstance {
 
     private var INSTANCE: Retrofit? = null
 

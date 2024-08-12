@@ -1,13 +1,19 @@
-package com.example.enfecdemo.view
+package com.example.enfecdemo.view.activities
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.enfecdemo.R
 
+/**
+ * The Activity that is loaded immediately after the splash screen.
+ *
+ * It is responsible for coordinating the Navigation Component. A link is provided in the README
+ * to explain how this component works and is built. Please refer to that for an explanation of
+ * how to implement this.
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
@@ -19,4 +25,7 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
 }

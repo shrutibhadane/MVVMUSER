@@ -16,15 +16,15 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         binding = FragmentDetailsBinding.bind(view)
 
         val bundle = arguments
-        var userID = bundle?.getInt("id")
-        var name = bundle?.getInt("name")
-        var userName = bundle?.getInt("username")
-        var email = bundle?.getInt("email")
+        var userID = bundle?.getInt("USER_ID")
+//        var name = bundle?.getInt("name")
+        var userName = bundle?.getString("USER_NAME")
+//        var email = bundle?.getInt("email")
 
         binding.textViewId.text = "ID: " + userID.toString()
-        binding.textViewName.text = "Name: " +name.toString()
+//        binding.textViewName.text = "Name: " +name.toString()
         binding.textViewUserName.text = "Username: " + userName.toString()
-        binding.textViewEmail.text = "Email: " + email.toString()
+//        binding.textViewEmail.text = "Email: " + email.toString()
 
 
     }
