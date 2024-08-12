@@ -21,18 +21,6 @@ class SplashActivity : AppCompatActivity() {
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         finish()
 
-        // An Example of how a theoretical Firebase User check would be implemented.
-//        // Get Firebase Intance
-//        val auth = FirebaseAuth.getInstance()
-//
-//        val intent = auth.currentUser?.let {
-//        // if currentUser is NOT null, go to MainActivity
-//            Intent(this, MainActivity::class.java)
-//        // else, when currentUser IS null, go to LoginActivity (This is not implemented in this app)
-//        } ?: Intent(this, LoginActivity::class.java)
-//        // launch whichever Intent was created
-//        startActivity(intent)
-//        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-//        finish()
+
     }
 }

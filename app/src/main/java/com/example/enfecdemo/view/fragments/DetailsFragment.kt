@@ -23,14 +23,18 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         val userData = bundle?.getParcelable<Users>(USER_DATA)
 
 
+        var address = userData?.address?.street.toString()+
+                " "+userData?.address?.suite.toString()
+                " "+userData?.address?.city.toString()
+
 
         binding.textViewId.text = "ID: " + userData?.id.toString()
         binding.textViewName.text = "Name: " + userData?.name.toString()
         binding.textViewUserName.text = "Username: " + userData?.username.toString()
         binding.textViewEmail.text = "Email: " + userData?.email.toString()
-        binding.textViewAddress.text = "Address: " + userData?.address.toString()
+        binding.textViewAddress.text = "Address: $address"
         binding.textViewPhone.text = "Phone: " + userData?.phone.toString()
-        binding.textViewWebsite.text = "Company: " + userData?.company.toString()
+        binding.textViewWebsite.text = "Company: " + userData?.company?.name.toString()
         binding.textViewCompany.text = "website: " + userData?.website.toString()
 
 
