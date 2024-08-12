@@ -7,7 +7,6 @@ import com.example.enfecdemo.api.RetroFitInstance
 import com.example.enfecdemo.model.database.UsersRoomDB
 import com.example.enfecdemo.model.database.daos.UsersDao
 import com.example.enfecdemo.model.database.model.Users
-import timber.log.Timber
 /**
  * Repository class that handles data operations for Users.
  * This class interacts with the local Room database and makes network calls using Retrofit.
@@ -19,16 +18,6 @@ class UserRepository private constructor(application: Application) {
     private val usersDAO: UsersDao = UsersRoomDB.getDatabase(application).getUserDao()
     private val userCalls = RetroFitInstance.getInstance().create(RestEndPoints::class.java)
 
-    /**
-     * An 'init' block in Kotlin is called immediately after an Object is created, and never again.
-     * This block is used only for demoing the Singleton pattern. UserRepository is accessed
-     * from many classes at different times. If you watch the Logcat messages while switching
-     * between screens, and filter by this class name, you'll notice that this message only appears
-     * once, implying that its constructor is only being called once.
-     */
-    init {
-        Timber.d("${this.javaClass.name} init for the first time.")
-    }
 
     /**
      * Inserts a user into the local Room database.
@@ -62,7 +51,6 @@ class UserRepository private constructor(application: Application) {
                 insertUser(it)
             }
         } catch (exception: Throwable) {
-            Timber.e(exception)
         }
     }
 
