@@ -1,5 +1,7 @@
 package com.example.enfecdemo.model.database.model
 
+import android.os.Parcel
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
@@ -39,4 +41,12 @@ data class Users(
     @SerializedName("company")
     @Expose
     val company: Company? = null,
-)
+) : Parcelable {
+    override fun describeContents(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        TODO("Not yet implemented")
+    }
+}
