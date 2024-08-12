@@ -14,7 +14,9 @@ import com.example.enfecdemo.utils.USER_DATA
 import com.example.enfecdemo.view.adapter.UsersListAdapter
 import com.example.enfecdemo.viewModel.viewModels.ListViewModel
 
-
+/**
+ * Fragment to display a list of users.
+ */
 class ListFragment : Fragment(R.layout.fragment_list) {
 
     private lateinit var binding: FragmentListBinding
